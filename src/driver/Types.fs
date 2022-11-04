@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 module Restler.Driver.Types
+open System
 
 /// The command that the user specifies to refresh an authentication token
 type RefreshTokenCommand =
