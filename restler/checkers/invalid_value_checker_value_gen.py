@@ -6,7 +6,7 @@ import itertools
 from datetime import datetime
 import sys
 
-MAX_SIZE = 8400 # max_size limited by libevent CVS-110647
+MAX_SIZE = 8000 # max_size limited by libevent CVS-110647 && CVS-130392
 
 random_seed=time.time()
 global random_gen
