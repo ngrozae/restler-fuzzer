@@ -23,6 +23,14 @@ RESTler is described in these peer-reviewed research papers:
 
 If you use RESTler in your research, please cite the (default) ICSE'2019 paper ([BibTeX](./docs/user-guide/icse2019.bib)).
 
+RESTler includes multiple test generation strategies.  In order to get a comprehensive comparative view w.r.t. to (i) efficiency 
+(i.e., how quickly can RESTler find crashes) and (ii) effectiveness 
+(i.e., how many crashes can RESTler find in a give time frame), 
+we recommend comparing against all documented `fuzzing_mode(s)`
+because each one provides a different trade-off between breadth and depth of state space exploration.
+We also recommend running `test` mode before any fuzzing, as described below, 
+to discover and fix setup issues (e.g. adding required pre-requisite parameter values to the dictionary) prior to fuzzing.
+
 RESTler was created at Microsoft Research and is still under active development.
 
 For an overview and demo on how to get started, see [Webinar - Fuzzing to Improve the Security and Reliability of Cloud Services](https://www.youtube.com/watch?v=FYmiPoRwEbE).
@@ -48,6 +56,10 @@ In the root of this repo, run
 docker build -t restler .
 ```
 
+The resulting docker container will have RESTler available in directory `/RESTler/restler` with main binary `Restler`. 
+
+You can then use this docker image as basis to add the application under test to execute fuzzing inside isolated docker containers.
+
 #### Local
 
 Prerequisites: Install [Python 3.8.2](https://www.python.org/downloads/) and
@@ -64,14 +76,6 @@ Switch to the repo root directory and run the following Python script:
 Note: if you get nuget error NU1403 when building, a quick workaround is to clear your cache with this command
 
 ```dotnet nuget locals all --clear```
-
-
-### **Binary-drop instructions**
-
-RESTler binary drops are coming soon.
-
-Prerequisites: Install [Python 3.8.2](https://www.python.org/downloads/) and
-[.NET 6.0](https://dotnet.microsoft.com/download/dotnet-core?utm_source=getdotnetcorecli&utm_medium=referral) or higher, for your appropriate OS.
 
 
 ## Using RESTler
