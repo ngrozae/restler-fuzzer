@@ -37,6 +37,14 @@ For an overview and demo on how to get started, see [Webinar - Fuzzing to Improv
 
 ![RESTler architecture](./docs/user-guide/RESTler-arch.png)
 
+## Maintainer Away Notice
+
+Hello Everyone,
+
+I (the primary maintainer) am currently on leave and expect to return in August 2025. During this time, I won't be able to review pull requests or issues. If you are a Microsoft employee and need immediate assistance, please contact my manager. 
+
+Thank you for your understanding.
+
 ## Build Status
 
 [![Build Status](https://dev.azure.com/ms/restler-fuzzer/_apis/build/status/restler-build-validation?branchName=main)](https://dev.azure.com/ms/restler-fuzzer/_build/latest?definitionId=422&branchName=main)
@@ -62,8 +70,8 @@ You can then use this docker image as basis to add the application under test to
 
 #### Local
 
-Prerequisites: Install [Python 3.8.2](https://www.python.org/downloads/) and
-[.NET 6.0](https://dotnet.microsoft.com/download/dotnet-core?utm_source=getdotnetcorecli&utm_medium=referral), for your appropriate OS.
+Prerequisites: Install [Python 3.12.8](https://www.python.org/downloads/) and
+[.NET 8.0](https://dotnet.microsoft.com/download/dotnet-core?utm_source=getdotnetcorecli&utm_medium=referral), for your appropriate OS.
 
 Create a directory where you'd like to place the RESTler binaries:
 
